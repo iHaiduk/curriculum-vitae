@@ -132,7 +132,7 @@ export const resumeInfo = {
           "Icon": SiExpo,
         },
         {
-          "name": "StyledComponents",
+          "name": "Styled",
           "Icon": SiStyledcomponents,
         },
       ]

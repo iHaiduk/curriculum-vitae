@@ -7,6 +7,7 @@
     height: 480px;
     background: #131313;
     position: relative;
+    overflow: hidden;
 }
 
 .avatarImage {
@@ -47,8 +48,9 @@
     overflow: hidden;
     height: calc(var(--dev-type-height) - 2px);
     box-sizing: border-box;
-    padding: 1px 0 0 150px;
+    padding: 1px 0 0 180px;
     margin-top: 48px;
+    width: 350px;
 }
 
 @media screen and (max-width: 340px) {
@@ -75,7 +77,7 @@
 }
 
 .listTypes li {
-    width: 130px;
+    width: 160px;
     height: var(--dev-type-height);
     text-align: right;
     padding-top: 1px;
