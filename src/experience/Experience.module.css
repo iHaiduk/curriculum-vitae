@@ -43,6 +43,11 @@
     font-weight: 600;
 }
 
+.expLeftLong {
+    margin-top: -4px;
+    font-size: 9px;
+}
+
 .expLeftPosition, .expLeftCompany, .expRightLink {
     font-size: 14px;
 }
@@ -73,5 +78,8 @@
 @media print {
     .titleBlock {
         margin-top: 30px;
+    }
+    .expRightDescription {
+        font-size: 10px;
     }
 }

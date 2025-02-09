@@ -24,7 +24,7 @@ import {
   SiStyledcomponents,
   SiJfrogpipelines,
   SiTimescale,
-  SiOpensearch
+  SiOpensearch, SiAntdesign, SiExpress, SiDocker, SiGrafana, SiPrometheus, SiAmazonapigateway
 } from "react-icons/si";
 import { GrNode } from "react-icons/gr";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -182,7 +182,7 @@ export const resumeInfo = {
           "Icon": SiPrisma,
         },
         {
-          "name": "Lodash/Remeda",
+          "name": "Lodash",
           "Icon": SiLodash,
         },
       ]
@@ -206,20 +206,103 @@ export const resumeInfo = {
           "name": "Web3",
           "Icon": SiWeb3Dotjs,
         },
-        {
-          "name": "Swagger",
-          "Icon": SiSwagger,
-        },
       ]
     },
   ],
 
   "projects": [
     {
+      "isActive": false,
+      "name": "eBazar",
+      "link": "https://e-bazar.ua/",
+      "start": new Date("2024-06-01"),
+      "company": "eBazar",
+      "companyLink": "https://e-bazar.ua/",
+      "position": "Co-Founder / Backend Developer",
+      "team": "6",
+      "description": "e-bazar.ua is a Ukrainian platform for posting free classified ads, allowing users to buy and sell goods or services directly without intermediaries or fees. The platform offers a convenient categorization of ads by sections and subsections, making it easy to find desired items. Users can post ads for free and even open their own virtual stores to boost sales.",
+      "skills": [
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "NestJS",
+          "Icon": SiNestjs,
+        },
+        {
+          "name": "RxJS",
+          "Icon": SiReactiveresume,
+        },
+        {
+          "name": "MongoDB",
+          "Icon": SiMongodb,
+        },
+        {
+          "name": "Prisma",
+          "Icon": SiPrisma,
+        },
+        {
+          "name": "Docker",
+          "Icon": SiDocker,
+        },
+      ]
+    },
+    {
+      "isActive": false,
+      "name": "Universal API",
+      "link": "https://www.universalapi.io/",
+      "start": new Date("2023-05-01"),
+      "company": "Velory",
+      "companyLink": "https://velory.com/",
+      "position": "Fullstack Developer",
+      "team": "5",
+      "description": "UniversalAPI is a unified API solution for developers, enabling seamless integration with multiple platforms and services. It simplifies development by standardizing interactions across systems, reducing the need for platform-specific code. Ideal for developers building cross-platform applications.",
+      "skills": [
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+
+        {
+          "name": "Microservice",
+          "link": microservice,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Vite",
+          "Icon": SiVitess,
+        },
+        {
+          "name": "AntDesign",
+          "Icon": SiAntdesign,
+        },
+        {
+          "name": "Express",
+          "Icon": SiExpress,
+        },
+        {
+          "name": "MongoDB",
+          "Icon": SiMongodb,
+        },
+        {
+          "name": "TypeORM",
+          "Icon": SiTypeorm,
+        },
+      ]
+    },
+    {
+      "isActive": true,
       "name": "MUW App",
       "link": "https://www.muw.app/",
-      "start": "2022",
-      "end": "Current",
+      "start": new Date("2022-01-01"),
       "company": "Finik.Pro",
       "companyLink": "https://finik.pro/",
       "position": "CTO / Backend Developer",
@@ -282,7 +365,131 @@ export const resumeInfo = {
           "name": "AWS Pipelines",
           "Icon": SiJfrogpipelines,
         },
+        {
+          "name": "Docker",
+          "Icon": SiDocker,
+        },
+        {
+          "name": "Swagger",
+          "Icon": SiSwagger,
+        },
       ]
-    }
+    },
+    {
+      "isActive": true,
+      "name": "ELPASO",
+      "link": "http://elpaso.co.uk/",
+      "start": new Date("2020-09-01"),
+      "end":  new Date("2023-01-01"),
+      "company": "ELPASO / Finik.Pro",
+      "companyLink": "https://finik.pro/",
+      "position": "Fullstack Developer",
+      "team": "10",
+      "description": "ELPASO is a UK-based fintech startup offering financial services tailored for entrepreneurs and businesses, including clients from Ukraine. Founded in 2017, the company focuses on simplifying access to international banking services, particularly for businesses operating in Europe, Asia, and North America.",
+      "skills": [
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Firebase",
+          "Icon": SiFirebase,
+        },
+        {
+          "name": "Microservice",
+          "link": microservice,
+        },
+        {
+          "name": "BunJS",
+          "link": "https://bun.sh/wordmark.svg",
+        },
+        {
+          "name": "NestJS",
+          "Icon": SiNestjs,
+        },
+        {
+          "name": "RxJS",
+          "Icon": SiReactiveresume,
+        },
+        {
+          "name": "TypeORM",
+          "Icon": SiTypeorm,
+        },
+        {
+          "name": "Timescale",
+          "Icon": SiTimescale,
+        },
+        {
+          "name": "Opensearch",
+          "Icon": SiOpensearch,
+        },
+        {
+          "name": "Redis",
+          "Icon": SiRedis,
+        },
+        {
+          "name": "RabbitMQ",
+          "Icon": SiRabbitmq,
+        },
+        {
+          "name": "GitHub",
+          "Icon": SiGithub,
+        },
+        {
+          "name": "AWS",
+          "Icon": FaAws,
+        },
+        {
+          "name": "AWS Pipelines",
+          "Icon": SiJfrogpipelines,
+        },
+        {
+          "name": "Docker",
+          "Icon": SiDocker,
+        },
+        {
+          "name": "Swagger",
+          "Icon": SiSwagger,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Aurora",
+      "link": "http://auroratechnologies.com.ua/",
+      "start": new Date("2020-06-01"),
+      "end":  new Date("2020-09-01"),
+      "company": "Aurora Technologies",
+      "companyLink": "http://auroratechnologies.com.ua/",
+      "position": "Backend Developer",
+      "team": "30+",
+      "description": "Ukrainian company specializing in innovative technology development and digital solutions for businesses. Its core activities include software development, web design, IT management, cybersecurity, consulting, and system integration, such as NetSuite.",
+      "skills": [
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Grafana",
+          "Icon": SiGrafana,
+        },
+        {
+          "name": "Prometheus",
+          "Icon": SiPrometheus,
+        },
+        {
+          "name": "Redis",
+          "Icon": SiRedis,
+        },
+        {
+          "name": "Express",
+          "Icon": SiExpress,
+        },
+        {
+          "name": "REST API",
+          "Icon": SiAmazonapigateway,
+        },
+      ]
+    },
   ]
 }

@@ -2,17 +2,21 @@ import {Container, Header, Image} from "semantic-ui-react";
 
 import ExperienceStyles from './Experience.module.css'
 import {resumeInfo} from "../resume.ts";
+import {getDateDifference} from "../utils.ts";
 
 export const Experience = () => (
   <Container text className={ExperienceStyles.titleBlock} id='Experience'>
     <Header as='h3' className={ExperienceStyles.title}>Work Experience</Header>
 
     <div className={ExperienceStyles.expMainBlock}>
-      {resumeInfo.projects.map(project => (
+      {resumeInfo.projects.filter(project => project.isActive).map(project => (
         <div className={ExperienceStyles.expWrapper}>
           <div className={ExperienceStyles.expLeft}>
             <div className={ExperienceStyles.expLeftYear}>
-              {project.start} - {project.end}
+              {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}
+            </div>
+            <div className={ExperienceStyles.expLeftLong}>
+              {getDateDifference(project.start, project.end)}
             </div>
             <div className={ExperienceStyles.expLeftPosition}>
               {project.position}
