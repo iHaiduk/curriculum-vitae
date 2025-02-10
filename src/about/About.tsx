@@ -46,5 +46,10 @@ export const About = () => (
         {resumeInfo.summary}
       </p>
     </Container>
+    <Container text className={AboutStyles.langBlock} id='Language'>
+      <p>
+        <b>Languages</b>: English B1 (Intermediate), Ukrainian (Native)
+      </p>
+    </Container>
   </>
 )

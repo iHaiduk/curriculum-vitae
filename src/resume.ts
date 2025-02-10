@@ -1077,5 +1077,107 @@ export const resumeInfo = {
         },
       ]
     },
+  ],
+
+  "education": [
+    {
+      "isActive": true,
+      "start": new Date("2014-09-01"),
+      "end": new Date("2016-09-01"),
+      "position": "Master of Engineering",
+      "education": "Engineer-mechanics, Designing and laser optical techniques",
+      "place": "National Technical University of Ukraine 'Kyiv Polytechnic Institute'",
+      "link": "https://kpi.ua/en"
+    },
+    {
+      "isActive": true,
+      "start": new Date("2014-09-01"),
+      "end": new Date("2015-09-01"),
+      "position": "Bachelor's degree",
+      "education": "Computer Science",
+      "place": "National Academy of Management ",
+      "link": "https://nam.kyiv.ua/en"
+    },
+    {
+      "isActive": true,
+      "start": new Date("2010-09-01"),
+      "end": new Date("2014-09-01"),
+      "position": "Bachelor's degree",
+      "education": "Engineer-mechanics, Institute of Mechanical Engineering",
+      "place": "National Technical University of Ukraine 'Kyiv Polytechnic Institute'",
+      "link": "https://kpi.ua/en"
+    },
+  ],
+
+  "licenses": [
+    {
+      "isActive": true,
+      "date": new Date("2017-12-12"),
+      "name": "Certificate M101JS: MongoDB for Node.js Developers (MongoDB University)",
+      "link": "https://university.mongodb.com/course_completion/98fec258-286a-43e6-988d-cb67b4ca",
+    },
+    {
+      "isActive": true,
+      "date": new Date("2016-10-15"),
+      "name": "Successfully passed the test JavaScript (Geekbrains)",
+      "link": "https://gb.ru/certificates/121247",
+    },
+    {
+      "isActive": true,
+      "date": new Date("2015-12-10"),
+      "name": "The method of processing of materials by laser radiation",
+      "link": "https://ua.patents.su/5-103184-sposib-obrobki-materialiv-lazernim-viprominyuvannyam.html",
+    },
+  ],
+  "hobbies": [
+    {
+      "isActive": true,
+      "start": new Date("2025-02-01"),
+      "position": "Cocos Creator",
+      "positionLink": "https://www.cocos.com/en/creator",
+      "name": "Game development with Cocos Creator (Cocos2d-x)",
+      "place": "Exploring game development using Cocos Creator, focusing on creating 2D games and learning the intricacies of game design and mechanics.",
+    },
+    {
+      "isActive": true,
+      "start": new Date("2024-06-01"),
+      "position": "ESPHome",
+      "positionLink": "https://esphome.io/",
+      "name": "Programming ESP32 microcontrollers",
+      "place": "Interested in developing and programming ESP32 microcontrollers to create standalone devices and integrate them into smart ecosystems.",
+    },
+    {
+      "isActive": true,
+      "start": new Date("2019-01-01"),
+      "position": "Node-RED",
+      "positionLink": "https://nodered.org/",
+      "name": "Developing NodeRed extensions for controlling ESPHome devices",
+      "place": "Passionate about creating custom solutions for automation and device integration through NodeRed, enhancing functionality and ease of managing smart systems.",
+    },
+    {
+      "isActive": true,
+      "start": new Date("2017-01-01"),
+      "position": "Home Assistant",
+      "positionLink": "https://www.home-assistant.io/",
+      "name": "Building smart homes based on Home Assistant",
+      "place": "Enthusiastic about designing and configuring smart homes using the Home Assistant platform, including device integration and creating complex automation scenarios.",
+    },
+    {
+      "isActive": true,
+      "start": new Date("2022-07-01"),
+      "position": "Autodesk Fusion",
+      "positionLink": "https://www.autodesk.com/products/fusion-360/",
+      "name": "3D modeling and 3D printing",
+      "place": "Passionate about creating 3D models and bringing them to life through 3D printing, enabling the development of unique parts and prototypes for personal and technical projects.",
+    },
+    {
+      "isActive": true,
+      "start": new Date("2014-01-01"),
+      "end": new Date("2015-06-01"),
+      "position": "Unity",
+      "positionLink": "https://unity.com/",
+      "name": "Game development with Unity",
+      "place": "Gained experience in developing games using Unity, working on both 2D and 3D projects, and learning about game physics, scripting, and asset integration.",
+    },
   ]
 }

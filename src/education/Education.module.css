@@ -1,0 +1,92 @@
+.titleBlock {
+    padding: 32px 0 0 0;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 48px !important;
+    color: rgba(100, 100, 100, 0.4) !important;
+    text-align: center;
+}
+
+.expMainBlock {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0;
+    gap: 24px;
+    overflow-y: auto;
+}
+
+.expWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.expLeft {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid rgba(100, 100, 100, 0.2);
+    padding: 4px 16px 4px 4px;
+    flex: 0 0 136px;
+    gap: 4px;
+}
+
+.expLeftLong {
+    margin-top: -4px;
+    font-size: 9px;
+}
+
+.expLeftPosition, .expLeftCompany, .expRightLink {
+    font-size: 14px;
+}
+
+.expRight {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 16px;
+    gap: 4px;
+    min-width: 340px;
+}
+
+.expLeftYear, .expRightName {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.expRightDescription {
+    font-size: 12px;
+}
+
+.expRightIconBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+.expRightIcon {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+@media print {
+    .titleBlock {
+        margin-top: 0;
+        padding: 8px 0 0 0;
+
+        &:first-child {
+            margin-top: 16px;
+        }
+    }
+    .title {
+        font-size: 24px !important;
+    }
+    .expRightDescription {
+        font-size: 10px;
+    }
+    .expWrapper {
+        gap: 4px !important;
+    }
+}
