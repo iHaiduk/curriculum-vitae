@@ -38,7 +38,7 @@ export const Experience = () => (
               Team: {project.team} peoples
             </div>
             <div className={ExperienceStyles.expRightIconBlock}>
-              {project.skills.map(({ name, Icon, link }) => (
+              {project.skills.map(({ name, Icon, link }: any) => (
                 <>
                   {Icon && <Icon className={ExperienceStyles.expRightIcon} title={name} />}
                   {link && <Image src={link} className={ExperienceStyles.expRightIcon} title={name} />}
