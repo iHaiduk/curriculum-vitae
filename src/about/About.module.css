@@ -120,12 +120,6 @@
     margin: 0 auto;
 }
 
-.about {
-    font-size: 48px !important;
-    color: rgba(100, 100, 100, 0.4) !important;
-    text-align: center;
-}
-
 .contact {
     display: flex;
     flex-direction: row;

@@ -1,11 +1,13 @@
 import {Container, Header, Image} from "semantic-ui-react";
 
-import ExperienceStyles from './Skills.module.css'
+import GlobalStyles from '../global.module.css'
 import {resumeInfo} from "../resume.ts";
+
+import ExperienceStyles from './Skills.module.css'
 
 export const Skills = () => (
   <Container text className={ExperienceStyles.titleBlock} id='Skills'>
-    <Header as='h3' className={ExperienceStyles.title}>Skills</Header>
+    <Header as='h3' className={GlobalStyles.title}>Skills</Header>
 
     <div className={ExperienceStyles.skillsBlock}>
       {

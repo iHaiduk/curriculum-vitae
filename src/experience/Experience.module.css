@@ -32,17 +32,6 @@
     gap: 4px;
 }
 
-.expRight {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.expLeftYear, .expRightName {
-    font-size: 16px;
-    font-weight: 600;
-}
-
 .expLeftLong {
     margin-top: -4px;
     font-size: 9px;
@@ -50,6 +39,19 @@
 
 .expLeftPosition, .expLeftCompany, .expRightLink {
     font-size: 14px;
+}
+
+.expRight {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 16px;
+    gap: 4px;
+    min-width: 340px;
+}
+
+.expLeftYear, .expRightName {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .expRightDescription {
@@ -67,12 +69,6 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
-}
-
-.expRight {
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 0 16px;
 }
 
 @media print {

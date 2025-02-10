@@ -31,12 +31,6 @@
     align-items: center;
 }
 
-@media (max-width: 640px) {
-    .skillBlockType {
-        flex: 0 0 120px;
-    }
-}
-
 .skillBlock {
     list-style: none;
     display: flex;
@@ -53,7 +47,8 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
-    width: 94px;
+    width: 92px;
+    flex: 0 0 92px;
 
     &:hover .skillIcon  {
         fill: rgba(70, 70, 70) !important;

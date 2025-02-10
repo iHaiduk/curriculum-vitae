@@ -16,7 +16,7 @@ import {
   SiRabbitmq,
   SiRedis,
   SiGithub,
-  SiGitlab,
+  SiVuedotjs,
   SiTypeorm,
   SiPrisma,
   SiExpo,
@@ -24,6 +24,27 @@ import {
   SiStyledcomponents,
   SiJfrogpipelines,
   SiTimescale,
+  SiRedux,
+  SiCssmodules,
+  SiReduxsaga,
+  SiKonva,
+  SiKoa,
+  SiBem,
+  SiHtml5,
+  SiCss3,
+  SiElasticsearch,
+  SiWebpack,
+  SiJira,
+  SiPhp,
+  SiJquery,
+  SiBackbone,
+  SiSocketdotio,
+  SiYii,
+  SiSymphony,
+  SiMysql,
+  SiApache,
+  SiNginx,
+  SiSphinx,
   SiOpensearch, SiAntdesign, SiExpress, SiDocker, SiGrafana, SiPrometheus, SiAmazonapigateway
 } from "react-icons/si";
 import { GrNode } from "react-icons/gr";
@@ -191,16 +212,16 @@ export const resumeInfo = {
       "name": "Other",
       "list": [
         {
-          "name": "GitHub",
-          "Icon": SiGithub,
-        },
-        {
-          "name": "GitLab",
-          "Icon": SiGitlab,
+          "name": "Docker",
+          "Icon": SiDocker,
         },
         {
           "name": "AWS",
           "Icon": FaAws,
+        },
+        {
+          "name": "GitHub",
+          "Icon": SiGithub,
         },
         {
           "name": "Web3",
@@ -222,6 +243,10 @@ export const resumeInfo = {
       "team": "6",
       "description": "e-bazar.ua is a Ukrainian platform for posting free classified ads, allowing users to buy and sell goods or services directly without intermediaries or fees. The platform offers a convenient categorization of ads by sections and subsections, making it easy to find desired items. Users can post ads for free and even open their own virtual stores to boost sales.",
       "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
         {
           "name": "React",
           "Icon": SiReact,
@@ -263,6 +288,10 @@ export const resumeInfo = {
       "team": "5",
       "description": "UniversalAPI is a unified API solution for developers, enabling seamless integration with multiple platforms and services. It simplifies development by standardizing interactions across systems, reducing the need for platform-specific code. Ideal for developers building cross-platform applications.",
       "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
         {
           "name": "React",
           "Icon": SiReact,
@@ -310,12 +339,20 @@ export const resumeInfo = {
       "description": "MUW.app is an innovative investment mobile application that enables users to invest in leading U.S. company stocks with minimal capital. The app offers fractional share purchases and an intuitive, user-friendly interface. The application is available for download on both the App Store and Google Play.",
       "skills": [
         {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
           "name": "React",
           "Icon": SiReact,
         },
         {
           "name": "Firebase",
           "Icon": SiFirebase,
+        },
+        {
+          "name": "Styled",
+          "Icon": SiStyledcomponents,
         },
         {
           "name": "Microservice",
@@ -388,20 +425,20 @@ export const resumeInfo = {
       "description": "ELPASO is a UK-based fintech startup offering financial services tailored for entrepreneurs and businesses, including clients from Ukraine. Founded in 2017, the company focuses on simplifying access to international banking services, particularly for businesses operating in Europe, Asia, and North America.",
       "skills": [
         {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
           "name": "React",
           "Icon": SiReact,
         },
         {
-          "name": "Firebase",
-          "Icon": SiFirebase,
+          "name": "Apollo",
+          "Icon": SiApollographql,
         },
         {
           "name": "Microservice",
           "link": microservice,
-        },
-        {
-          "name": "BunJS",
-          "link": "https://bun.sh/wordmark.svg",
         },
         {
           "name": "NestJS",
@@ -412,12 +449,12 @@ export const resumeInfo = {
           "Icon": SiReactiveresume,
         },
         {
-          "name": "TypeORM",
-          "Icon": SiTypeorm,
+          "name": "Styled",
+          "Icon": SiStyledcomponents,
         },
         {
-          "name": "Timescale",
-          "Icon": SiTimescale,
+          "name": "TypeORM",
+          "Icon": SiTypeorm,
         },
         {
           "name": "Opensearch",
@@ -428,28 +465,8 @@ export const resumeInfo = {
           "Icon": SiRedis,
         },
         {
-          "name": "RabbitMQ",
-          "Icon": SiRabbitmq,
-        },
-        {
-          "name": "GitHub",
-          "Icon": SiGithub,
-        },
-        {
-          "name": "AWS",
-          "Icon": FaAws,
-        },
-        {
-          "name": "AWS Pipelines",
-          "Icon": SiJfrogpipelines,
-        },
-        {
           "name": "Docker",
           "Icon": SiDocker,
-        },
-        {
-          "name": "Swagger",
-          "Icon": SiSwagger,
         },
       ]
     },
@@ -465,6 +482,10 @@ export const resumeInfo = {
       "team": "30+",
       "description": "Ukrainian company specializing in innovative technology development and digital solutions for businesses. Its core activities include software development, web design, IT management, cybersecurity, consulting, and system integration, such as NetSuite.",
       "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
         {
           "name": "NodeJS",
           "Icon": GrNode,
@@ -486,8 +507,573 @@ export const resumeInfo = {
           "Icon": SiExpress,
         },
         {
+          "name": "VueJS",
+          "Icon": SiVuedotjs,
+        },
+        {
           "name": "REST API",
           "Icon": SiAmazonapigateway,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Clearmove",
+      "link": "https://clearmove.com/",
+      "start": new Date("2019-10-01"),
+      "end":  new Date("2020-05-15"),
+      "company": "Clearmove",
+      "companyLink": "https://www.facebook.com/ClearmoveGlobal",
+      "position": "Fullstack Developer",
+      "team": "10",
+      "description": "ClearMove is a platform for managing global employee mobility, simplifying relocations, travel, and assignments. It automates tasks, tracks expenses, ensures compliance, and helps companies reduce costs while improving transparency and employee experience.",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "React Native",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Apollo",
+          "Icon": SiApollographql,
+        },
+        {
+          "name": "RxJS",
+          "Icon": SiReactiveresume,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "NestJS",
+          "Icon": SiNestjs,
+        },
+        {
+          "name": "PostgreSQL",
+          "Icon": SiPostgresql,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "VistaCreate (old Crello)",
+      "link": "https://create.vista.com/",
+      "start": new Date("2017-11-01"),
+      "end":  new Date("2019-10-01"),
+      "company": "Crello",
+      "companyLink": "https://crello.com/",
+      "position": "TeamLead Frontend",
+      "team": "30",
+      "description": "Create by Vista is an online design platform for creating professional visuals like social media posts, banners, and presentations. It offers customizable templates and tools, making it easy for anyone to design eye-catching content quickly.",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Redux",
+          "Icon": SiRedux,
+        },
+        {
+          "name": "Redux Saga",
+          "Icon": SiReduxsaga,
+        },
+        {
+          "name": "KonvaJS",
+          "Icon": SiKonva,
+        },
+        {
+          "name": "SCSS",
+          "Icon": SiCssmodules,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Koa",
+          "Icon": SiKoa,
+        },
+        {
+          "name": "PostgreSQL",
+          "Icon": SiPostgresql,
+        },
+        {
+          "name": "Redis",
+          "Icon": SiRedis,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Casino OlyBet",
+      "link": "https://www.olybet.ee/",
+      "start": new Date("2017-03-01"),
+      "end":  new Date("2018-05-01"),
+      "company": "RIDDEC ESTONIA",
+      "companyLink": "https://riddec.com/",
+      "position": "CTO",
+      "team": "5",
+      "description": "OlyBet is an online gaming and betting platform offering sports betting, casino games, poker, and live entertainment. Available in Estonia and other regions, it provides a wide range of betting options, competitive odds, and interactive features for an engaging user experience.",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Redux",
+          "Icon": SiRedux,
+        },
+        {
+          "name": "SCSS",
+          "Icon": SiCssmodules,
+        },
+        {
+          "name": "Bem",
+          "Icon": SiBem,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Koa",
+          "Icon": SiKoa,
+        },
+        {
+          "name": "MongoDB",
+          "Icon": SiMongodb,
+        },
+        {
+          "name": "Elasticsearch",
+          "Icon": SiElasticsearch,
+        },
+        {
+          "name": "Webpack",
+          "Icon": SiWebpack,
+        },
+        {
+          "name": "Jira",
+          "Icon": SiJira,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "FoxSec",
+      "link": "https://www.foxsec.eu/",
+      "start": new Date("2017-03-01"),
+      "end":  new Date("2018-05-01"),
+      "company": "RIDDEC ESTONIA",
+      "companyLink": "https://riddec.com/",
+      "position": "CTO",
+      "team": "3",
+      "description": "FoxSec is a cybersecurity company specializing in penetration testing, vulnerability assessments, and security consulting. It helps businesses identify and mitigate risks, protect sensitive data, and ensure compliance with security standards, offering tailored solutions to enhance overall cyber resilience.",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Redux",
+          "Icon": SiRedux,
+        },
+        {
+          "name": "SCSS",
+          "Icon": SiCssmodules,
+        },
+        {
+          "name": "Bem",
+          "Icon": SiBem,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Koa",
+          "Icon": SiKoa,
+        },
+        {
+          "name": "MongoDB",
+          "Icon": SiMongodb,
+        },
+        {
+          "name": "Elasticsearch",
+          "Icon": SiElasticsearch,
+        },
+        {
+          "name": "Webpack",
+          "Icon": SiWebpack,
+        },
+        {
+          "name": "Jira",
+          "Icon": SiJira,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Bitsgap",
+      "link": "https://bitsgap.com/",
+      "start": new Date("2017-03-01"),
+      "end":  new Date("2018-05-01"),
+      "company": "RIDDEC ESTONIA",
+      "companyLink": "https://riddec.com/",
+      "position": "CTO",
+      "team": "3",
+      "description": "Bitsgap is a comprehensive trading platform designed for cryptocurrency enthusiasts and traders. It offers a range of tools and features to simplify and enhance trading across multiple exchanges",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Redux",
+          "Icon": SiRedux,
+        },
+        {
+          "name": "SCSS",
+          "Icon": SiCssmodules,
+        },
+        {
+          "name": "Bem",
+          "Icon": SiBem,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Koa",
+          "Icon": SiKoa,
+        },
+        {
+          "name": "MongoDB",
+          "Icon": SiMongodb,
+        },
+        {
+          "name": "Elasticsearch",
+          "Icon": SiElasticsearch,
+        },
+        {
+          "name": "Webpack",
+          "Icon": SiWebpack,
+        },
+        {
+          "name": "Jira",
+          "Icon": SiJira,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Siteplus",
+      "link": "https://siteplus.com/",
+      "start": new Date("2015-03-01"),
+      "end":  new Date("2018-05-01"),
+      "company": "Dreamscape Networks",
+      "companyLink": "https://www.dreamscapenetworks.com/",
+      "position": "CTO",
+      "team": "20",
+      "description": "SitePlus is a user-friendly website builder designed to help individuals and businesses create professional websites quickly and easily",
+      "skills": [
+        {
+          "name": "TypeScript",
+          "Icon": SiTypescript,
+        },
+        {
+          "name": "React",
+          "Icon": SiReact,
+        },
+        {
+          "name": "Redux",
+          "Icon": SiRedux,
+        },
+        {
+          "name": "SCSS",
+          "Icon": SiCssmodules,
+        },
+        {
+          "name": "Bem",
+          "Icon": SiBem,
+        },
+        {
+          "name": "NodeJS",
+          "Icon": GrNode,
+        },
+        {
+          "name": "Koa",
+          "Icon": SiKoa,
+        },
+        {
+          "name": "MongoDB",
+          "Icon": SiMongodb,
+        },
+        {
+          "name": "Elasticsearch",
+          "Icon": SiElasticsearch,
+        },
+        {
+          "name": "Webpack",
+          "Icon": SiWebpack,
+        },
+        {
+          "name": "Jira",
+          "Icon": SiJira,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Teacher of Web Development",
+      "start": new Date("2015-09-01"),
+      "end":  new Date("2016-01-01"),
+      "company": "GolTeens",
+      "companyLink": "https://goiteens.com/",
+      "position": "Teacher",
+      "team": "10",
+      "description": "GoITeens is an educational platform designed to help children and teenagers acquire modern IT skills, such as programming, design, robotics, and other digital technologies.",
+      "skills": [
+        {
+          "name": "HTML 5",
+          "Icon": SiHtml5,
+        },
+        {
+          "name": "CSS 3",
+          "Icon": SiCss3,
+        },
+        {
+          "name": "JavaScript",
+          "Icon": SiJavascript,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Basic Group, Chandelier assessment, Scientia, eMap Web-portal of Taras Shevchenko, eWebinar, eCast",
+      "start": new Date("2014-01-01"),
+      "end":  new Date("2015-04-01"),
+      "company": "Basic Group",
+      "companyLink": "https://www.facebook.com/basicgroup.ua",
+      "position": "Fullstack Developer",
+      "team": "10",
+      "description": "Basic Group is one of the leading Ukrainian IT companies, specializing in the development of comprehensive IT solutions and providing high-quality services in the field of information technology.",
+      "skills": [
+        {
+          "name": "HTML 5",
+          "Icon": SiHtml5,
+        },
+        {
+          "name": "CSS 3",
+          "Icon": SiCss3,
+        },
+        {
+          "name": "JavaScript",
+          "Icon": SiJavascript,
+        },
+        {
+          "name": "jQuery",
+          "Icon": SiJquery,
+        },
+        {
+          "name": "Backbone",
+          "Icon": SiBackbone,
+        },
+        {
+          "name": "Socket.IO",
+          "Icon": SiSocketdotio,
+        },
+        {
+          "name": "PHP",
+          "Icon": SiPhp,
+        },
+        {
+          "name": "Yii Framework",
+          "Icon": SiYii,
+        },
+        {
+          "name": "Symphony Framework",
+          "Icon": SiSymphony,
+        },
+        {
+          "name": "MySQL",
+          "Icon": SiMysql,
+        },
+        {
+          "name": "Sphinx",
+          "Icon": SiSphinx,
+        },
+        {
+          "name": "Apache",
+          "Icon": SiApache,
+        },
+        {
+          "name": "Nginx",
+          "Icon": SiNginx,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Ski Gagarin, IRST MedicalService, AURA, IRST EasyTour",
+      "start": new Date("2013-04-01"),
+      "end":  new Date("2014-01-01"),
+      "company": "IRST",
+      "companyLink": "https://www.linkedin.com/company/irst-ukraine",
+      "position": "Fullstack Developer",
+      "team": "15",
+      "description": "IRST Ukraine is a company specializing in the development of comprehensive IT solutions tailored for modern businesses across various industries. Our team of professionals is dedicated to delivering high-quality, reliable products aimed at maximizing our clients' business efficiency. Through a collaborative and creative partnership with our clients, we achieve exceptional results.",
+      "skills": [
+        {
+          "name": "HTML 5",
+          "Icon": SiHtml5,
+        },
+        {
+          "name": "CSS 3",
+          "Icon": SiCss3,
+        },
+        {
+          "name": "JavaScript",
+          "Icon": SiJavascript,
+        },
+        {
+          "name": "jQuery",
+          "Icon": SiJquery,
+        },
+        {
+          "name": "Backbone",
+          "Icon": SiBackbone,
+        },
+        {
+          "name": "Socket.IO",
+          "Icon": SiSocketdotio,
+        },
+        {
+          "name": "PHP",
+          "Icon": SiPhp,
+        },
+        {
+          "name": "MySQL",
+          "Icon": SiMysql,
+        },
+        {
+          "name": "Apache",
+          "Icon": SiApache,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Simplinar, Ramirent, DevChallenge(UWC), Piligrim-M, Compex, RadugaStock, RadugaImages",
+      "start": new Date("2010-05-01"),
+      "end":  new Date("2013-04-01"),
+      "company": "IT Lounchpad",
+      "companyLink": "https://www.linkedin.com/company/it-launchpad",
+      "position": "Fullstack Developer",
+      "team": "3",
+      "description": "Business Incubator IT Launchpad provides full financial, managerial and mentor support for qualifying startups from Ukraine at early stages. We are currently accepting new project applications. Please visit our website for more information and application forms. ",
+      "skills": [
+        {
+          "name": "HTML 5",
+          "Icon": SiHtml5,
+        },
+        {
+          "name": "CSS 3",
+          "Icon": SiCss3,
+        },
+        {
+          "name": "JavaScript",
+          "Icon": SiJavascript,
+        },
+        {
+          "name": "jQuery",
+          "Icon": SiJquery,
+        },
+        {
+          "name": "Backbone",
+          "Icon": SiBackbone,
+        },
+        {
+          "name": "Socket.IO",
+          "Icon": SiSocketdotio,
+        },
+        {
+          "name": "PHP",
+          "Icon": SiPhp,
+        },
+        {
+          "name": "MySQL",
+          "Icon": SiMysql,
+        },
+        {
+          "name": "Apache",
+          "Icon": SiApache,
+        },
+      ]
+    },
+    {
+      "isActive": true,
+      "name": "Biomax, Artes, Branson, Questorio",
+      "start": new Date("2008-05-01"),
+      "end":  new Date("2010-05-01"),
+      "company": "Freelance",
+      "companyLink": "https://www.linkedin.com/in/ihaiduk/",
+      "position": "",
+      "team": "1",
+      "description": "Freelance. ",
+      "skills": [
+        {
+          "name": "HTML 5",
+          "Icon": SiHtml5,
+        },
+        {
+          "name": "CSS 3",
+          "Icon": SiCss3,
+        },
+        {
+          "name": "JavaScript",
+          "Icon": SiJavascript,
+        },
+        {
+          "name": "jQuery",
+          "Icon": SiJquery,
+        },
+        {
+          "name": "PHP",
+          "Icon": SiPhp,
+        },
+        {
+          "name": "MySQL",
+          "Icon": SiMysql,
+        },
+        {
+          "name": "Apache",
+          "Icon": SiApache,
         },
       ]
     },

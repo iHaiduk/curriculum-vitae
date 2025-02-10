@@ -3,9 +3,10 @@ import {SemanticICONS} from "semantic-ui-react/dist/commonjs/generic";
 
 import avatar from '../assets/avatar_black.png'
 import linkedin from '../assets/linkedin-qr.png'
+import {resumeInfo} from "../resume.ts";
+import GlobalStyles from '../global.module.css'
 
 import AboutStyles from './About.module.css'
-import {resumeInfo} from "../resume.ts";
 
 export const About = () => (
   <>
@@ -40,7 +41,7 @@ export const About = () => (
       <Image src={linkedin} className={AboutStyles.linkedIn} />
     </div>
     <Container text className={AboutStyles.aboutBlock} id='About'>
-      <Header as='h3' className={AboutStyles.about}>About</Header>
+      <Header as='h3' className={GlobalStyles.title}>About</Header>
       <p>
         {resumeInfo.summary}
       </p>

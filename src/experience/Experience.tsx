@@ -1,12 +1,14 @@
 import {Container, Header, Image} from "semantic-ui-react";
 
-import ExperienceStyles from './Experience.module.css'
 import {resumeInfo} from "../resume.ts";
+import GlobalStyles from '../global.module.css'
 import {getDateDifference} from "../utils.ts";
+
+import ExperienceStyles from './Experience.module.css'
 
 export const Experience = () => (
   <Container text className={ExperienceStyles.titleBlock} id='Experience'>
-    <Header as='h3' className={ExperienceStyles.title}>Work Experience</Header>
+    <Header as='h3' className={GlobalStyles.title}>Work Experience</Header>
 
     <div className={ExperienceStyles.expMainBlock}>
       {resumeInfo.projects.filter(project => project.isActive).map(project => (
@@ -27,7 +29,7 @@ export const Experience = () => (
           </div>
           <div className={ExperienceStyles.expRight}>
             <div className={ExperienceStyles.expRightName}>
-              {project.name} ( <a href={project.link} target="_blank"  className={ExperienceStyles.expRightLink}>{project.link}</a> )
+              {project.name} {project.link && ( <a href={project.link} target="_blank"  className={ExperienceStyles.expRightLink}>{project.link}</a> )}
             </div>
             <div className={ExperienceStyles.expRightDescription}>
               {project.description}
