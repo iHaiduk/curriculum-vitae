@@ -1,14 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { render } from 'preact';
 
-import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-css/components/reset.min.css'
+import 'semantic-ui-css/components/site.min.css'
+import 'semantic-ui-css/components/container.min.css'
+import 'semantic-ui-css/components/header.min.css'
+import 'semantic-ui-css/components/image.min.css'
 
 import './main.css'
 
 import App from './App.tsx'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+render(<App />, document.getElementById('root')!);

@@ -1,5 +1,4 @@
-import {Container, Header, Icon, Image} from "semantic-ui-react";
-import {SemanticICONS} from "semantic-ui-react/dist/commonjs/generic";
+import {Container, Header, Image} from "semantic-ui-react";
 
 import avatar from '../assets/avatar_black.png'
 import linkedin from '../assets/linkedin-qr.png'
@@ -27,9 +26,9 @@ export const About = () => (
       </div>
       <div className={AboutStyles.shareBlock}>
         {
-          resumeInfo.profiles.map((current) => (
-            <a href={current.url} target="_blank" title={current.network}>
-              <Icon name={`${current.icon} square` as SemanticICONS} size='big' className={AboutStyles.icon} />
+          resumeInfo.profiles.map(({network, url, Icon}) => (
+            <a href={url} key={url} target="_blank" title={network}>
+              <Icon className={AboutStyles.icon} />
             </a>
           ))
         }
