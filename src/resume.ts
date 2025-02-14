@@ -127,10 +127,6 @@ export const resumeInfo = {
           "name": "NodeRed",
           "Icon": SiNodered,
         },
-        {
-          "name": "Unity",
-          "Icon": SiUnity,
-        },
       ]
     },
     {
@@ -226,6 +222,10 @@ export const resumeInfo = {
         {
           "name": "Web3",
           "Icon": SiWeb3Dotjs,
+        },
+        {
+          "name": "Unity",
+          "Icon": SiUnity,
         },
       ]
     },
