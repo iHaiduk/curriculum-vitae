@@ -8,7 +8,7 @@ import {
   SiReactiveresume,
   SiVitess,
   SiLodash,
-  SiCocos,
+  SiUnity,
   SiApollographql,
   SiMongodb,
   SiPostgresql,
@@ -128,8 +128,8 @@ export const resumeInfo = {
           "Icon": SiNodered,
         },
         {
-          "name": "Cocos",
-          "Icon": SiCocos,
+          "name": "Unity",
+          "Icon": SiUnity,
         },
       ]
     },
@@ -1133,9 +1133,9 @@ export const resumeInfo = {
     {
       "isActive": true,
       "start": new Date("2025-02-01"),
-      "position": "Cocos Creator",
-      "positionLink": "https://www.cocos.com/en/creator",
-      "name": "Game development with Cocos Creator (Cocos2d-x)",
+      "position": "Unity",
+      "positionLink": "https://unity.com/",
+      "name": "Game development with Unity 6",
       "place": "Exploring game development using Cocos Creator, focusing on creating 2D games and learning the intricacies of game design and mechanics.",
     },
     {
