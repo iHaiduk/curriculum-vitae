@@ -1145,7 +1145,7 @@ export const resumeInfo = {
       "position": "Unity",
       "positionLink": "https://unity.com/",
       "name": "Game development with Unity 6",
-      "place": "Exploring game development using Cocos Creator, focusing on creating 2D games and learning the intricacies of game design and mechanics.",
+      "place": "Exploring game development using Unity 6, focusing on creating 2D games and learning the intricacies of game design and mechanics.",
     },
     {
       "isActive": true,

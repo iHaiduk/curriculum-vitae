@@ -78,4 +78,7 @@
     .expRightDescription {
         font-size: 10px;
     }
+    .expMainBlock {
+        gap: 21px;
+    }
 }
