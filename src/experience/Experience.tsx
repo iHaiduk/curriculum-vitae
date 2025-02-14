@@ -8,7 +8,7 @@ import ExperienceStyles from './Experience.module.css'
 
 export const Experience = () => (
   <Container text className={ExperienceStyles.titleBlock} id='Experience'>
-    <Header as='h3' className={GlobalStyles.title}>Work Experience</Header>
+    <Header as='h2' className={GlobalStyles.title}>Work Experience</Header>
 
     <div className={ExperienceStyles.expMainBlock}>
       {resumeInfo.projects.filter(project => project.isActive).map(project => (
@@ -41,7 +41,7 @@ export const Experience = () => (
               {project.skills.map(({ name, Icon, link }: any) => (
                 <>
                   {Icon && <Icon className={ExperienceStyles.expRightIcon} title={name} />}
-                  {link && <Image src={link} className={ExperienceStyles.expRightIcon} title={name} />}
+                  {link && <Image src={link} className={ExperienceStyles.expRightIcon} title={name} alt={name} />}
                 </>
               ))}
             </div>

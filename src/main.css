@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
-:root {
-    font-family: "Playfair Display", Georgia, serif;
+:root, body {
+    font-family: "Playfair Display", Georgia, serif !important;
     line-height: 1.5;
     font-weight: 400;
 
@@ -14,4 +12,9 @@
 
     hyphens: auto;
     text-wrap: pretty;
+}
+
+h1,h2,h3 {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-weight: 600 !important;
 }

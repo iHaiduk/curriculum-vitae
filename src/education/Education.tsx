@@ -9,7 +9,7 @@ import ExperienceStyles from "../experience/Experience.module.css";
 export const Education = () => (
   <>
     <Container text className={EducationStyles.titleBlock} id='Education'>
-      <Header as='h3' className={EducationStyles.title}>Education</Header>
+      <Header as='h2' className={EducationStyles.title}>Education</Header>
 
       <div className={EducationStyles.expMainBlock}>
         {resumeInfo.education.filter(project => project.isActive).map(project => (
@@ -39,7 +39,7 @@ export const Education = () => (
     </Container>
 
     <Container text className={EducationStyles.titleBlock} id='Licenses'>
-      <Header as='h3' className={EducationStyles.title}>Licenses & certifications</Header>
+      <Header as='h2' className={EducationStyles.title}>Licenses & certifications</Header>
 
       <div className={EducationStyles.expMainBlock}>
         {resumeInfo.licenses.filter(project => project.isActive).map(project => (
@@ -63,7 +63,7 @@ export const Education = () => (
     </Container>
 
     <Container text className={EducationStyles.titleBlock} id='Hobbies'>
-      <Header as='h3' className={EducationStyles.title}>Hobbies</Header>
+      <Header as='h2' className={EducationStyles.title}>Hobbies</Header>
 
       <div className={EducationStyles.expMainBlock}>
         {resumeInfo.hobbies.filter(project => project.isActive).map(project => (
