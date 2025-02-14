@@ -53,7 +53,7 @@
     width: 350px;
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 407px) {
     .subTitle {
         margin-top: 96px;
     }
@@ -153,7 +153,7 @@
 }
 
 .linkedIn {
-    display: none;
+    display: none !important;
     position: absolute;
     bottom: 8px;
     left: 16px;
@@ -192,6 +192,6 @@
     }
 
     .linkedIn {
-        display: block;
+        display: block !important;
     }
 }
