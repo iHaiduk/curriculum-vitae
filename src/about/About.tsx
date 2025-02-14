@@ -11,7 +11,7 @@ import AboutStyles from './About.module.css'
 export const About = () => (
   <>
     <div className={AboutStyles.block}>
-      <Image src={avatar} className={AboutStyles.avatarImage} />
+      <Image src={avatar} className={AboutStyles.avatarImage} alt="Ihor Haiduk – Fullstack Developer, ReactJS | Node.js" />
       <div className={AboutStyles.hiddenLayer} />
       <Header as='h1' className={AboutStyles.title}>{resumeInfo.name}</Header>
       <div className={AboutStyles.subTitle}>
