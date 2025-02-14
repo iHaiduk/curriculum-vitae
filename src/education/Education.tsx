@@ -12,8 +12,8 @@ export const Education = () => (
       <Header as='h2' className={EducationStyles.title}>Education</Header>
 
       <div className={EducationStyles.expMainBlock}>
-        {resumeInfo.education.filter(project => project.isActive).map(project => (
-          <div className={EducationStyles.expWrapper}>
+        {resumeInfo.education.filter(project => project.isActive).map((project, index) => (
+          <div className={EducationStyles.expWrapper} key={index}>
             <div className={EducationStyles.expLeft}>
               <div className={EducationStyles.expLeftYear}>
                 {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}
@@ -42,8 +42,8 @@ export const Education = () => (
       <Header as='h2' className={EducationStyles.title}>Licenses & certifications</Header>
 
       <div className={EducationStyles.expMainBlock}>
-        {resumeInfo.licenses.filter(project => project.isActive).map(project => (
-          <div className={EducationStyles.expWrapper}>
+        {resumeInfo.licenses.filter(project => project.isActive).map((project, index) => (
+          <div className={EducationStyles.expWrapper} key={index}>
             <div className={EducationStyles.expLeft}>
               <div className={EducationStyles.expLeftYear}>
                 {project.date.getFullYear()}
@@ -66,8 +66,8 @@ export const Education = () => (
       <Header as='h2' className={EducationStyles.title}>Hobbies</Header>
 
       <div className={EducationStyles.expMainBlock}>
-        {resumeInfo.hobbies.filter(project => project.isActive).map(project => (
-          <div className={EducationStyles.expWrapper}>
+        {resumeInfo.hobbies.filter(project => project.isActive).map((project, index) => (
+          <div className={EducationStyles.expWrapper} key={index}>
             <div className={EducationStyles.expLeft}>
               <div className={EducationStyles.expLeftYear}>
                 {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}

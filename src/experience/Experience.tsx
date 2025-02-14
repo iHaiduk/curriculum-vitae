@@ -1,4 +1,4 @@
-import {Container, Header, Image} from "semantic-ui-react";
+import {Container, Header} from "semantic-ui-react";
 
 import {resumeInfo} from "../resume.ts";
 import GlobalStyles from '../global.module.css'
@@ -12,7 +12,7 @@ export const Experience = () => (
 
     <div className={ExperienceStyles.expMainBlock}>
       {resumeInfo.projects.filter(project => project.isActive).map(project => (
-        <div className={ExperienceStyles.expWrapper}>
+        <div className={ExperienceStyles.expWrapper} key={project.name}>
           <div className={ExperienceStyles.expLeft}>
             <div className={ExperienceStyles.expLeftYear}>
               {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}
@@ -39,10 +39,10 @@ export const Experience = () => (
             </div>
             <div className={ExperienceStyles.expRightIconBlock}>
               {project.skills.map(({ name, Icon, link }: any) => (
-                <>
+                <span key={link}>
                   {Icon && <Icon className={ExperienceStyles.expRightIcon} title={name} />}
-                  {link && <Image src={link} className={ExperienceStyles.expRightIcon} title={name} alt={name} />}
-                </>
+                  {link && <img src={link} className={ExperienceStyles.expRightIcon} title={name} alt={name} />}
+                </span>
               ))}
             </div>
           </div>
