@@ -4,7 +4,7 @@ import {
   SiApache,
   SiApollographql,
   SiBackbone,
-  SiBem,
+  SiBem, SiCocos,
   SiCss3,
   SiCssmodules,
   SiDocker,
@@ -135,6 +135,10 @@ export const resumeInfo = {
         {
           "name": "NodeRed",
           "Icon": SiNodered,
+        },
+        {
+          "name": "Cocos",
+          "Icon": SiCocos,
         },
       ]
     },
