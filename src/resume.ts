@@ -65,7 +65,7 @@ export const resumeInfo = {
   "name": "Ihor Haiduk",
   "label": "Developer",
   "email": "cookkycok@gmail.com",
-  "phone": "+380931673185",
+  "phone": "",
   "summary": "I am an experienced developer who creates scalable and high-performance web applications using a modern technology stack. In my work, I address business challenges through technical implementation and architectural design, while also building and managing teams, including recruiting candidates. By applying in-depth technical analysis and a strategic approach to optimizing business processes, I develop flexible and maintainable systems that ensure maximum efficiency and application stability.",
 
   "profiles": [
@@ -74,11 +74,11 @@ export const resumeInfo = {
       "url": "mailto:cookkycok@gmail.com",
       "Icon": IoMailOutline,
     },
-    {
-      "network": "Phone: +380931673185",
-      "url": "tel:+380931673185",
-      "Icon": MdPhoneIphone,
-    },
+    // {
+    //   "network": "Phone: +",
+    //   "url": "tel:+",
+    //   "Icon": MdPhoneIphone,
+    // },
     {
       "network": "LinkedIn Profile",
       "url": "https://www.linkedin.com/in/iHaiduk/",
@@ -294,7 +294,7 @@ export const resumeInfo = {
       "isActive": false,
       "name": "Universal API",
       "link": "https://www.universalapi.io/",
-      "start": new Date("2023-05-01"),
+      "start": new Date("2023-05-22"),
       "company": "Velory",
       "companyLink": "https://velory.com/",
       "position": "Fullstack Developer",

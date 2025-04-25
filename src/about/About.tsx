@@ -35,7 +35,7 @@ export const About = () => (
       </div>
       <div className={AboutStyles.contact}>
         <span className={AboutStyles.contactElement}>Email: <a href={`mailto:${resumeInfo.email}`} target="_blank" title="Email">{resumeInfo.email}</a></span>
-        <span className={AboutStyles.contactElement}>Phone: <a href={`tel:${resumeInfo.phone}`} target="_blank" title="Phone number">{resumeInfo.phone}</a></span>
+        {/*<span className={AboutStyles.contactElement}>Phone: <a href={`tel:${resumeInfo.phone}`} target="_blank" title="Phone number">{resumeInfo.phone}</a></span>*/}
       </div>
       <img src={linkedin} className={AboutStyles.linkedIn} alt="QR Code on LinkedIn" />
     </div>
