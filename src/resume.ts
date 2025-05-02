@@ -57,7 +57,6 @@ import {
 import {GrNode} from "react-icons/gr";
 import {TbBrandNextjs} from "react-icons/tb";
 import {FaAws} from "react-icons/fa6";
-import {MdPhoneIphone} from "react-icons/md";
 import microservice from "./assets/microservice.png";
 import {IoMailOutline} from "react-icons/io5";
 
