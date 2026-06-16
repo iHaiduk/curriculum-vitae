@@ -5,12 +5,12 @@ import {Education} from "./education/Education.tsx";
 
 function App() {
   return (
-    <>
+    <main>
       <About />
       <Skills />
       <Experience />
       <Education />
-    </>
+    </main>
   )
 }
 

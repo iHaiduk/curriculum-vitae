@@ -5,21 +5,65 @@ import { defineConfig, type Plugin } from 'vite'
 import { vitePrerenderPlugin } from "vite-prerender-plugin"
 import preact from "@preact/preset-vite";
 
-// During prerender, asset imports (avatar, qr, etc.) resolve to absolute
-// `file://.../vite-prerender-plugin/headless-prerender/assets/<name>` URLs and
-// get baked into the HTML. The filename hashes match the real emitted assets,
-// so we just rewrite the broken prefix to the relative `./assets/` path.
-function fixPrerenderAssetUrls(): Plugin {
+// Post-build HTML processing applied after prerender:
+//  1. Fix absolute `file://.../headless-prerender/assets/` image URLs that the
+//     prerender step bakes in (hashes already match the emitted assets).
+//  2. Inline the bundled CSS so it is no longer a render-blocking request (FCP/LCP).
+//  3. Load Google Fonts non-render-blocking (text paints immediately in fallback).
+//  4. Preload the hero avatar (LCP candidate) and mark it high priority.
+function optimizeBuiltHtml(): Plugin {
   return {
-    name: 'fix-prerender-asset-urls',
+    name: 'optimize-built-html',
     apply: 'build',
     enforce: 'post',
     writeBundle(options) {
-      const htmlPath = path.join(options.dir ?? 'dist', 'index.html')
+      const outDir = options.dir ?? 'dist'
+      const htmlPath = path.join(outDir, 'index.html')
       if (!fs.existsSync(htmlPath)) return
-      const html = fs.readFileSync(htmlPath, 'utf-8')
-      const fixed = html.replace(/file:\/\/[^"']*\/headless-prerender\/assets\//g, './assets/')
-      if (fixed !== html) fs.writeFileSync(htmlPath, fixed)
+      let html = fs.readFileSync(htmlPath, 'utf-8')
+
+      // 1. Rewrite leaked prerender file:// asset URLs to relative paths.
+      html = html.replace(/file:\/\/[^"']*\/headless-prerender\/assets\//g, './assets/')
+
+      // 1b. Empty the decorative inline icon SVGs in the prerendered markup.
+      // They make up ~85% of the HTML, are aria-hidden, and the client render
+      // repaints them; keeping the sized <svg> shells avoids any layout shift.
+      html = html.replace(/(<svg\b[^>]*>)[\s\S]*?(<\/svg>)/g, '$1$2')
+
+      // 2. Inline bundled stylesheets to remove render-blocking CSS requests.
+      html = html.replace(
+        /<link\b[^>]*rel="stylesheet"[^>]*href="(\.\/assets\/[^"]+\.css)"[^>]*>/g,
+        (tag, href) => {
+          const cssPath = path.join(outDir, href.replace(/^\.\//, ''))
+          if (!fs.existsSync(cssPath)) return tag
+          const css = fs.readFileSync(cssPath, 'utf-8')
+          return `<style>${css}</style>`
+        },
+      )
+
+      // 3. Make the Google Fonts stylesheet non-render-blocking.
+      html = html.replace(
+        /<link\b([^>]*href="https:\/\/fonts\.googleapis\.com\/[^"]*"[^>]*)rel="stylesheet"([^>]*)>/g,
+        (_tag, before, after) =>
+          `<link ${before}rel="stylesheet" media="print" onload="this.media='all'"${after}>` +
+          `<noscript><link ${before}rel="stylesheet"${after}></noscript>`,
+      )
+
+      // 4. Preload the hero avatar (LCP) and flag it high priority.
+      const avatar = html.match(/\.\/assets\/avatar_black-[^"']+\.(?:webp|png)/)?.[0]
+      if (avatar) {
+        const type = avatar.endsWith('.webp') ? ' type="image/webp"' : ''
+        html = html.replace(
+          '</head>',
+          `  <link rel="preload" as="image"${type} href="${avatar}" fetchpriority="high">\n  </head>`,
+        )
+        html = html.replace(
+          new RegExp(`(<img[^>]*src="${avatar.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}")`),
+          '$1 fetchpriority="high" decoding="async"',
+        )
+      }
+
+      fs.writeFileSync(htmlPath, html)
     },
   }
 }
@@ -34,6 +78,6 @@ export default defineConfig({
     // Bakes the rendered app into #root at build time so the HTML is fully
     // readable by search engines, ATS and AI crawlers without running JS.
     vitePrerenderPlugin({ renderTarget: '#root' }),
-    fixPrerenderAssetUrls(),
+    optimizeBuiltHtml(),
   ],
 })

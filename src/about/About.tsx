@@ -1,6 +1,6 @@
 import {Container, Header, Image} from "semantic-ui-react";
 
-import avatar from '../assets/avatar_black.png'
+import avatar from '../assets/avatar_black.webp'
 import linkedin from '../assets/linkedin-qr.png'
 import {resumeInfo} from "../resume.ts";
 import GlobalStyles from '../global.module.css'
@@ -27,8 +27,8 @@ export const About = () => (
       <div className={AboutStyles.shareBlock}>
         {
           resumeInfo.profiles.map(({network, url, Icon}) => (
-            <a href={url} key={url} target="_blank" title={network}>
-              <Icon className={AboutStyles.icon} />
+            <a href={url} key={url} target="_blank" rel="noopener noreferrer" title={network} aria-label={network}>
+              <Icon className={AboutStyles.icon} aria-hidden="true" focusable="false" />
             </a>
           ))
         }

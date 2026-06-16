@@ -20,8 +20,8 @@ export const Skills = () => (
               {
                 block.list.map(({name, Icon, link}) => (
                   <li className={ExperienceStyles.skill} key={name}>
-                    {Icon && <Icon className={ExperienceStyles.skillIcon} />}
-                    {link && <img src={link} className={ExperienceStyles.skillIcon} alt={name} />}
+                    {Icon && <Icon className={ExperienceStyles.skillIcon} aria-hidden="true" focusable="false" />}
+                    {link && <img src={link} className={ExperienceStyles.skillIcon} alt="" aria-hidden="true" />}
                     <p className={ExperienceStyles.skillTitle}>{name}</p>
                   </li>
                 ))
