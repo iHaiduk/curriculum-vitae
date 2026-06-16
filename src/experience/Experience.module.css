@@ -58,6 +58,25 @@
     font-size: 12px;
 }
 
+.expRightRole {
+    font-size: 12px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.expRightAchievements {
+    margin: 2px 0 0;
+    padding-left: 18px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.expRightAchievements li {
+    line-height: 1.35;
+}
+
 .expRightIconBlock {
     display: flex;
     flex-direction: row;
@@ -75,10 +94,18 @@
     .titleBlock {
         margin-top: 30px;
     }
-    .expRightDescription {
+    .expRightDescription, .expRightRole, .expRightAchievements {
         font-size: 10px;
     }
     .expMainBlock {
-        gap: 21px;
+        gap: 16px;
+        overflow: visible;
+    }
+    .expWrapper {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    .expRightIconBlock {
+        padding-top: 4px;
     }
 }

@@ -47,7 +47,7 @@ export const About = () => (
     </Container>
     <Container text className={AboutStyles.langBlock} id='Language'>
       <p>
-        <b>Languages</b>: English B1 (Intermediate), Ukrainian (Native)
+        <b>Languages</b>: English B2 (Upper-Intermediate), Ukrainian (Native)
       </p>
     </Container>
   </>
