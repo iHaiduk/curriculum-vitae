@@ -1,5 +1,5 @@
 import type {IconType} from "react-icons";
-import {Container, Header} from "semantic-ui-react";
+import {Header} from "semantic-ui-react";
 
 import {resumeInfo} from "../resume.ts";
 import GlobalStyles from '../global.module.css'
@@ -29,16 +29,20 @@ interface Project {
   skills: Skill[];
 }
 
+const formatDateISO = (d: Date) => d.toISOString().split('T')[0];
+
 export const Experience = () => (
-  <Container text className={ExperienceStyles.titleBlock} id='Experience'>
+  <section className={ExperienceStyles.titleBlock} id='Experience'>
     <Header as='h2' className={GlobalStyles.title}>Work Experience</Header>
 
     <div className={ExperienceStyles.expMainBlock}>
       {(resumeInfo.projects as Project[]).filter(project => project.isActive).map((project) => (
-        <div className={ExperienceStyles.expWrapper} key={project.name}>
+        <article className={ExperienceStyles.expWrapper} key={project.name}>
           <div className={ExperienceStyles.expLeft}>
             <div className={ExperienceStyles.expLeftYear}>
-              {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}
+              <time dateTime={formatDateISO(project.start)}>{project.start.getFullYear()}</time>
+              {' – '}
+              {project.end ? <time dateTime={formatDateISO(project.end)}>{project.end.getFullYear()}</time> : 'Current'}
             </div>
             <div className={ExperienceStyles.expLeftLong}>
               {getDateDifference(project.start, project.end)}
@@ -47,12 +51,12 @@ export const Experience = () => (
               {project.position}
             </div>
             <div className={ExperienceStyles.expLeftCompany}>
-              <a href={project.companyLink} target="_blank">{project.company}</a>
+              <a href={project.companyLink} target="_blank" rel="noopener noreferrer">{project.company}</a>
             </div>
           </div>
           <div className={ExperienceStyles.expRight}>
             <div className={ExperienceStyles.expRightName}>
-              {project.name} {project.link && ( <a href={project.link} target="_blank"  className={ExperienceStyles.expRightLink}>{project.link}</a> )}
+              {project.name} {project.link && ( <a href={project.link} target="_blank" rel="noopener noreferrer" className={ExperienceStyles.expRightLink}>{project.link}</a> )}
             </div>
             {project.role && (
               <div className={ExperienceStyles.expRightRole}>
@@ -76,14 +80,14 @@ export const Experience = () => (
             <div className={ExperienceStyles.expRightIconBlock}>
               {project.skills.map(({ name, Icon, link }) => (
                 <span key={link}>
-                  {Icon && <Icon className={ExperienceStyles.expRightIcon} title={name} />}
+                  {Icon && <Icon className={ExperienceStyles.expRightIcon} title={name} aria-label={name} />}
                   {link && <img src={link} className={ExperienceStyles.expRightIcon} title={name} alt={name} />}
                 </span>
               ))}
             </div>
           </div>
-        </div>
+        </article>
       ))}
     </div>
-  </Container>
+  </section>
 )

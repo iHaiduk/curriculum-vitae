@@ -1,4 +1,4 @@
-import {Container, Header} from "semantic-ui-react";
+import {Header} from "semantic-ui-react";
 
 import {resumeInfo} from "../resume.ts";
 import {getDateDifference} from "../utils.ts";
@@ -6,17 +6,21 @@ import {getDateDifference} from "../utils.ts";
 import EducationStyles from './Education.module.css'
 import ExperienceStyles from "../experience/Experience.module.css";
 
+const formatDateISO = (d: Date) => d.toISOString().split('T')[0];
+
 export const Education = () => (
   <>
-    <Container text className={EducationStyles.titleBlock} id='Education'>
+    <section className={EducationStyles.titleBlock} id='Education'>
       <Header as='h2' className={EducationStyles.title}>Education</Header>
 
       <div className={EducationStyles.expMainBlock}>
         {resumeInfo.education.filter(project => project.isActive).map((project, index) => (
-          <div className={EducationStyles.expWrapper} key={index}>
+          <article className={EducationStyles.expWrapper} key={index}>
             <div className={EducationStyles.expLeft}>
               <div className={EducationStyles.expLeftYear}>
-                {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}
+                <time dateTime={formatDateISO(project.start)}>{project.start.getFullYear()}</time>
+                {' – '}
+                {project.end ? <time dateTime={formatDateISO(project.end)}>{project.end.getFullYear()}</time> : 'Current'}
               </div>
               <div className={EducationStyles.expLeftLong}>
                 {getDateDifference(project.start, project.end)}
@@ -30,53 +34,55 @@ export const Education = () => (
                 {project.education}
               </div>
               <div className={EducationStyles.expRightDescription}>
-                <a href={project.link} target="_blank"  className={EducationStyles.expRightLink}>{project.place}</a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className={EducationStyles.expRightLink}>{project.place}</a>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </Container>
+    </section>
 
-    <Container text className={EducationStyles.titleBlock} id='Licenses'>
+    <section className={EducationStyles.titleBlock} id='Licenses'>
       <Header as='h2' className={EducationStyles.title}>Licenses & certifications</Header>
 
       <div className={EducationStyles.expMainBlock}>
         {resumeInfo.licenses.filter(project => project.isActive).map((project, index) => (
-          <div className={EducationStyles.expWrapper} key={index}>
+          <article className={EducationStyles.expWrapper} key={index}>
             <div className={EducationStyles.expLeft}>
               <div className={EducationStyles.expLeftYear}>
-                {project.date.getFullYear()}
+                <time dateTime={formatDateISO(project.date)}>{project.date.getFullYear()}</time>
               </div>
             </div>
             <div className={EducationStyles.expRight}>
               <div className={EducationStyles.expRightName}>
-                <a href={project.link} target="_blank"  className={EducationStyles.expRightLink}>{project.name}</a>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className={EducationStyles.expRightLink}>{project.name}</a>
               </div>
               <div className={ExperienceStyles.expRightDescription}>
-                Date: {project.date.getDate()}/{project.date.getMonth()}/{project.date.getFullYear()}
+                Date: <time dateTime={formatDateISO(project.date)}>{project.date.getDate()}/{project.date.getMonth()}/{project.date.getFullYear()}</time>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </Container>
+    </section>
 
-    <Container text className={EducationStyles.titleBlock} id='Hobbies'>
+    <section className={EducationStyles.titleBlock} id='Hobbies'>
       <Header as='h2' className={EducationStyles.title}>Hobbies</Header>
 
       <div className={EducationStyles.expMainBlock}>
         {resumeInfo.hobbies.filter(project => project.isActive).map((project, index) => (
-          <div className={EducationStyles.expWrapper} key={index}>
+          <article className={EducationStyles.expWrapper} key={index}>
             <div className={EducationStyles.expLeft}>
               <div className={EducationStyles.expLeftYear}>
-                {project.start.getFullYear()} - {project.end?.getFullYear() ?? 'Current'}
+                <time dateTime={formatDateISO(project.start)}>{project.start.getFullYear()}</time>
+                {' – '}
+                {project.end ? <time dateTime={formatDateISO(project.end)}>{project.end.getFullYear()}</time> : 'Current'}
               </div>
               <div className={EducationStyles.expLeftLong}>
                 {getDateDifference(project.start, project.end)}
               </div>
               <div className={EducationStyles.expLeftPosition}>
-                <a href={project.positionLink} target="_blank"  className={EducationStyles.expRightLink}>{project.position}</a>
+                <a href={project.positionLink} target="_blank" rel="noopener noreferrer" className={EducationStyles.expRightLink}>{project.position}</a>
               </div>
             </div>
             <div className={EducationStyles.expRight}>
@@ -87,9 +93,9 @@ export const Education = () => (
                 {project.place}
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </Container>
+    </section>
   </>
 )

@@ -1,0 +1,60 @@
+/*
+  PDF-hidden text layer:
+  - On screen: invisible (font-size 0, same color as background)
+  - In PDF: invisible to the eye but present in the text layer
+  - ATS/AI parsers can extract this text from the PDF
+  - NOT display:none or visibility:hidden (those get stripped by PDF generators)
+*/
+.pdfOnly {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 0;
+    color: rgba(0, 0, 0, 0);
+    line-height: 0;
+    letter-spacing: 0;
+    user-select: all;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* On screen: completely invisible but in DOM */
+@media screen {
+    .pdfOnly {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        clip-path: inset(50%);
+        font-size: 0;
+        color: transparent;
+    }
+}
+
+/* In print/PDF: text exists but is invisible to the eye */
+@media print {
+    .pdfOnly {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 0.5px;
+        color: #ffffff;
+        background: #ffffff;
+        line-height: 0.5px;
+        letter-spacing: 0;
+        z-index: -1;
+        user-select: all;
+        pointer-events: none;
+        white-space: nowrap;
+        /* Ensure text is in PDF text layer but invisible */
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+}
