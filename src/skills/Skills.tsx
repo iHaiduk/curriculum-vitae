@@ -1,4 +1,4 @@
-import {Header} from "semantic-ui-react";
+import {Container, Header} from "semantic-ui-react";
 
 import GlobalStyles from '../global.module.css'
 import {resumeInfo} from "../resume.ts";
@@ -6,7 +6,7 @@ import {resumeInfo} from "../resume.ts";
 import ExperienceStyles from './Skills.module.css'
 
 export const Skills = () => (
-  <section className={ExperienceStyles.titleBlock} id='Skills'>
+  <Container text className={ExperienceStyles.titleBlock} id='Skills'>
     <Header as='h2' className={GlobalStyles.title}>Skills</Header>
 
     <div className={ExperienceStyles.skillsBlock}>
@@ -31,5 +31,5 @@ export const Skills = () => (
         ))
       }
     </div>
-  </section>
+  </Container>
 )

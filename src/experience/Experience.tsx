@@ -1,5 +1,5 @@
 import type {IconType} from "react-icons";
-import {Header} from "semantic-ui-react";
+import {Container, Header} from "semantic-ui-react";
 
 import {resumeInfo} from "../resume.ts";
 import GlobalStyles from '../global.module.css'
@@ -32,7 +32,7 @@ interface Project {
 const formatDateISO = (d: Date) => d.toISOString().split('T')[0];
 
 export const Experience = () => (
-  <section className={ExperienceStyles.titleBlock} id='Experience'>
+  <Container text className={ExperienceStyles.titleBlock} id='Experience'>
     <Header as='h2' className={GlobalStyles.title}>Work Experience</Header>
 
     <div className={ExperienceStyles.expMainBlock}>
@@ -89,5 +89,5 @@ export const Experience = () => (
         </article>
       ))}
     </div>
-  </section>
+  </Container>
 )

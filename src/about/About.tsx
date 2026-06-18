@@ -1,4 +1,4 @@
-import {Header, Image} from "semantic-ui-react";
+import {Container, Header, Image} from "semantic-ui-react";
 
 import avatar from '../assets/avatar_black.webp'
 import linkedin from '../assets/linkedin-qr.png'
@@ -38,16 +38,16 @@ export const About = () => (
       </address>
       <img src={linkedin} className={AboutStyles.linkedIn} alt="QR Code on LinkedIn" />
     </header>
-    <section className={AboutStyles.aboutBlock} id='About'>
+    <Container text className={AboutStyles.aboutBlock} id='About'>
       <Header as='h2' className={GlobalStyles.title}>About</Header>
       <p>
         {resumeInfo.summary}
       </p>
-    </section>
-    <section className={AboutStyles.langBlock} id='Language'>
+    </Container>
+    <Container text className={AboutStyles.langBlock} id='Language'>
       <p>
         <b>Languages</b>: English B2 (Upper-Intermediate), Ukrainian (Native)
       </p>
-    </section>
+    </Container>
   </>
 )

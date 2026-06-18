@@ -1,4 +1,4 @@
-import {Header} from "semantic-ui-react";
+import {Container, Header} from "semantic-ui-react";
 
 import {resumeInfo} from "../resume.ts";
 import {getDateDifference} from "../utils.ts";
@@ -10,7 +10,7 @@ const formatDateISO = (d: Date) => d.toISOString().split('T')[0];
 
 export const Education = () => (
   <>
-    <section className={EducationStyles.titleBlock} id='Education'>
+    <Container text className={EducationStyles.titleBlock} id='Education'>
       <Header as='h2' className={EducationStyles.title}>Education</Header>
 
       <div className={EducationStyles.expMainBlock}>
@@ -40,9 +40,9 @@ export const Education = () => (
           </article>
         ))}
       </div>
-    </section>
+    </Container>
 
-    <section className={EducationStyles.titleBlock} id='Licenses'>
+    <Container text className={EducationStyles.titleBlock} id='Licenses'>
       <Header as='h2' className={EducationStyles.title}>Licenses & certifications</Header>
 
       <div className={EducationStyles.expMainBlock}>
@@ -64,9 +64,9 @@ export const Education = () => (
           </article>
         ))}
       </div>
-    </section>
+    </Container>
 
-    <section className={EducationStyles.titleBlock} id='Hobbies'>
+    <Container text className={EducationStyles.titleBlock} id='Hobbies'>
       <Header as='h2' className={EducationStyles.title}>Hobbies</Header>
 
       <div className={EducationStyles.expMainBlock}>
@@ -96,6 +96,6 @@ export const Education = () => (
           </article>
         ))}
       </div>
-    </section>
+    </Container>
   </>
 )
