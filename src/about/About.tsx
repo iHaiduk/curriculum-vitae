@@ -10,18 +10,10 @@ import AboutStyles from './About.module.css'
 export const About = () => (
   <>
     <header className={AboutStyles.block}>
-      <Image src={avatar} className={AboutStyles.avatarImage} alt="Ihor Haiduk – Fullstack Developer, ReactJS | Node.js" />
+      <Image src={avatar} className={AboutStyles.avatarImage} alt="Ihor Haiduk – AI Fullstack Engineer / CTO, MCP, React | Node.js" />
       <div className={AboutStyles.hiddenLayer} />
       <h1 className={AboutStyles.title}>{resumeInfo.name}</h1>
       <div className={AboutStyles.subTitle}>
-        <ul className={AboutStyles.listTypes}>
-          <li>Frontend</li>
-          <li>Backend</li>
-          <li>Mobile</li>
-          <li>Fullstack</li>
-          <li>Frontend</li>
-        </ul>
-        <span className={AboutStyles.printType}>Fullstack </span>
         {resumeInfo.label}
       </div>
       <nav className={AboutStyles.shareBlock} aria-label="Social profiles">

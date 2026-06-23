@@ -3,6 +3,9 @@ import {resumeInfo} from "../resume.ts";
 import SkillsStyles from './SearchableSkills.module.css'
 
 const roleKeywords = [
+  'AI Engineer', 'AI Fullstack Engineer', 'AI Developer', 'AI Engineering',
+  'MCP Developer', 'MCP Engineer', 'MCP Server Developer', 'AI Agent Developer',
+  'AI CTO', 'AI Integration Engineer', 'AI-powered Developer',
   'CTO', 'Chief Technology Officer', 'Tech Lead', 'Technical Lead',
   'Senior Fullstack Developer', 'Senior Full Stack Developer', 'Senior Backend Developer',
   'Frontend Team Lead', 'Full Stack Engineer', 'Backend Engineer', 'Frontend Engineer',
@@ -12,6 +15,12 @@ const roleKeywords = [
 ]
 
 const domainKeywords = [
+  'AI', 'artificial intelligence', 'AI agent', 'AI agents', 'AI integration',
+  'MCP', 'Model Context Protocol', 'MCP server', 'MCP development',
+  'AI development', 'AI-powered development', 'AI-driven development',
+  'LLM', 'large language model', 'LLM integration', 'AI workflow', 'AI automation',
+  'agentic AI', 'agentic development', 'AI agent orchestration',
+  'AI tools', 'AI tooling', 'AI pipeline', 'RAG', 'retrieval augmented generation',
   'fintech', 'fintech developer', 'stock trading systems', 'broker integration',
   'payment processing', 'payment integration', 'trading platform',
   'SaaS', 'SaaS platforms', 'SaaS development', 'multi-tenant',
@@ -29,6 +38,10 @@ const domainKeywords = [
 ]
 
 const techKeywords = [
+  'MCP', 'Model Context Protocol', 'MCP server', 'MCP tools',
+  'AI agents', 'LLM', 'OpenAI', 'Claude', 'Anthropic', 'AI APIs',
+  'LangChain', 'AI pipeline', 'RAG', 'vector database',
+  'prompt engineering', 'AI tooling', 'AI integration',
   'TypeScript', 'JavaScript', 'Node.js', 'Node.js developer',
   'NestJS', 'NestJS developer', 'Bun', 'Bun.js',
   'React', 'React developer', 'React.js', 'React Native', 'React Native developer',

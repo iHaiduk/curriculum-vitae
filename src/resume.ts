@@ -62,10 +62,10 @@ import { IoMailOutline } from "react-icons/io5";
 
 export const resumeInfo = {
   "name": "Ihor Haiduk",
-  "label": "Developer",
+  "label": "AI Fullstack Engineer / CTO",
   "email": "cookkycok@gmail.com",
   "phone": "",
-  "summary": "Technical leader and senior fullstack engineer with 15+ years of experience building products end-to-end — from architecture and team hiring to shipping to production. I have worked as CTO, Tech Lead and Co-Founder across fintech, stock trading, gaming and SaaS. I design scalable microservice systems on Node.js, NestJS and Bun, build React and React Native frontends, recruit and lead engineering teams, and turn business goals into reliable, maintainable platforms. Hands-on with high-load architecture, real-time data, payment and broker integrations, and visual rule/logic engines.",
+  "summary": "AI Fullstack Engineer / CTO with 15+ years of shipping products end-to-end. I turned a failing fintech startup into a 100k+ user platform and led it to a successful acquisition. Today I build MCP servers and integrate AI agents into development workflows, delivering entire products with AI at the core. Previously CTO, Tech Lead and Co-Founder across fintech, stock trading, gaming and SaaS. I build scalable microservice architectures on Node.js, NestJS and Bun with React and React Native frontends. Hands-on with high-load systems, real-time data, payment and broker integrations.",
 
   "profiles": [
     {
@@ -250,13 +250,15 @@ export const resumeInfo = {
       "start": new Date("2022-01-01"),
       "company": "Finik.Pro",
       "companyLink": "https://finik.pro/",
-      "position": "CTO / Backend Developer",
+      "position": "AI Engineer",
       "team": "7",
-      "role": "CTO at Finik.Pro since 2020 and hands-on backend lead. Built the backend and the mobile app from scratch and lead a cross-functional team of 7 (frontend, backend, mobile).",
+      "role": "AI Engineer leading full-stack product development powered by AI. Design and build MCP (Model Context Protocol) servers that integrate AI agents into the project workflow. Drive the entire project lifecycle using AI — from architecture and coding to deployment and maintenance.",
       "achievements": [
-        "Built the entire backend and mobile app from scratch for a fractional-shares US-stock investing product, live on the App Store and Google Play.",
+        "Designed and developed custom MCP servers that integrate AI agents and LLMs into the development workflow, enabling fully AI-driven project delivery.",
+        "Built the entire backend and mobile app from scratch for a fractional-shares US-stock investing product, live on the App Store and Google Play — developed and maintained primarily with AI assistance.",
         "Designed a microservice architecture on Bun + NestJS + ElysiaJS with PostgreSQL/Supabase, Redis, PGMQ message bus, Supabase Realtime (CDC/WebSocket) and the Transactional Outbox pattern.",
         "Built the trading engine: broker integrations (Exante, Alpaca), live and historical quotes, order execution and FIFO P&L accounting.",
+        "Integrated AI agents into the CI/CD and development pipeline, automating code reviews, testing, and deployment.",
         "Cut service cold start from 3–4 minutes to under 30 seconds by profiling and removing the si.diskLayout() bottleneck.",
         "Turned the product into a white-label platform that launches a new country/brand in under a week — 100k+ clients per market.",
       ],
